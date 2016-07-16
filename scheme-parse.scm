@@ -83,7 +83,7 @@
                    ((eq? (car e)) (quote cond) cond*)
                    (else application*)))
              (else application*))))
-(define value
+(define zyz_value
     (lambda (e)
       (meaning e (quote ()))))
 (define meaning
@@ -198,4 +198,4 @@
     (lambda (closure vals)
       (meaning (body-of closure) (extend-table (new-entry (formals-of closure) vals) (table-of closure)))))
 
-(value (((lambda (n) (lambda (m) (o+ n m))) 8) 5))
+(zyz_value (((lambda (n) (lambda (m) (o+ n m))) 8) 5))
